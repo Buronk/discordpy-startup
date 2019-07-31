@@ -19,4 +19,4 @@ async def on_voice_state_update(member, before, after):
             await alert_channel.send(msg)
 
 
-bot.run(token)
+client.run(token)
