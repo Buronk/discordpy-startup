@@ -14,6 +14,6 @@ async def on_voice_state_update(member, before, after):
         if before.channel is None: 
             msg = {member.name} が {after.channel.name} に参加しました。'
             await alert_channel.send(msg)
+        elif after.channel is None: 
 
-bot.run(token)
-client.run(token)
+client.run("NjA1NzI0ODMwODU1MDY5NzA2.XUGTYw.PCXcmdQUnCNDkVUZiACVOPJBGAM")
