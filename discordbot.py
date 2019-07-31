@@ -1,13 +1,10 @@
 from discord.ext import commands
 import os
 import traceback
+import discord
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-
-
-import discord
-
 client = discord.Client()
 
 @client.event
@@ -20,3 +17,4 @@ async def on_voice_state_update(member, before, after):
 
 
 client.run(token)
+bot.run(token)
