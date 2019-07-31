@@ -5,7 +5,6 @@ import discord
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-ctoken = os.environ['DISCORD_CLIENT_TOKEN']
 client = discord.Client()
 
 @client.event
@@ -17,4 +16,4 @@ async def on_voice_state_update(member, before, after):
             await alert_channel.send(msg)
 
 bot.run(token)
-client.run(ctoken)
+client.run(token)
