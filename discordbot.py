@@ -16,6 +16,5 @@ async def on_voice_state_update(member, before, after):
             msg = {member.name} が {after.channel.name} に参加しました。'
             await alert_channel.send(msg)
 
-
-client.run(token)
 bot.run(token)
+client.run(ctoken)
