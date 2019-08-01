@@ -16,3 +16,4 @@ async def on_voice_state_update(member, before, after):
         await alert_channel.send(f'{member.name} が {after.channel.name} に参加しました。')
 
 client.run(TOKEN)
+#何か動かん
