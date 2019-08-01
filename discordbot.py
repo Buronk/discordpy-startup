@@ -4,8 +4,12 @@ import traceback
 import discord
 
 bot = commands.Bot(command_prefix='/')
-token = os.environ['DISCORD_BOT_TOKEN']
+TOKEN = os.environ['DISCORD_BOT_TOKEN']
 client = discord.Client()
+
+@client.event
+async def on_ready():
+    print('BOT起動')
 
 @client.event
 async def on_voice_state_update(member, before, after): 
@@ -15,5 +19,4 @@ async def on_voice_state_update(member, before, after):
             msg = {member.name} が {after.channel.name} に参加しました。'
             await alert_channel.send(msg)
 
-bot.run(token)
-client.run(token)
+client.run(TOKEN)
